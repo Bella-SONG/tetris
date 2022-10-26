@@ -1,0 +1,178 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0 auto;
+	background: rgb(132, 193, 229);
+	background: linear-gradient(
+		rgb(132, 193, 229) 0%,
+		rgb(132, 223, 229) 30%,
+		rgba(255, 190, 99, 1) 100%
+	);
+	color: #fff;
+	font-family: "urbanist", sans-serif;
+}
+
+div.intro {
+	/* display: none; */
+	position: relative;
+	z-index: 100;
+	height: 100vh;
+	width: 100vw;
+	background: rgb(109, 146, 226);
+	background: linear-gradient(
+		/* rgb(109, 146, 226) 0%, */ rgba(120, 164, 221, 0.87) 10%,
+		rgb(132, 201, 229) 30%,
+		rgba(140, 229, 132, 0.521) 70%,
+		rgba(255, 190, 99, 0.904) 100%
+	);
+}
+div.intro h1 {
+	width: 1200px;
+	margin: 0 auto;
+	line-height: 3;
+	font-size: 120px;
+	display: flex;
+	justify-content: space-around;
+}
+
+h1 > span:first-of-type {
+	color: #ffadc5;
+}
+h1 > span:nth-of-type(2) {
+	color: rgb(255, 190, 99);
+}
+h1 > span:nth-of-type(3) {
+	color: #f5c9b9;
+}
+h1 > span:nth-of-type(4) {
+	color: #c5f7ca;
+}
+h1 > span:nth-of-type(5) {
+	color: #e1acf0;
+}
+h1 > span:last-of-type {
+	color: #bcbef8;
+}
+div.intro button {
+	margin-top: 100px;
+	font-family: "urbanist", sans-serif;
+	font-size: 46px;
+	font-weight: 600;
+	border: 5px solid #fff;
+	letter-spacing: 10px;
+	padding: 5px 20px;
+	cursor: pointer;
+}
+
+div.main {
+	display: none;
+}
+h2 {
+	font-size: 60px;
+	text-align: center;
+	line-height: 1.2;
+	font-weight: 700;
+	color: rgb(247, 243, 191);
+}
+h2::first-letter {
+	color: #f58bab;
+}
+
+h3 {
+	margin-top: 0;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+button {
+	border: none;
+	background: none;
+	padding: 0;
+	color: #fff;
+	display: flex;
+	justify-items: center;
+	line-height: 1.5;
+	border: 2px solid #fff;
+	padding: 5px 10px;
+	font-family: "urbanist", sans-serif;
+	letter-spacing: 2px;
+	margin: 0 auto 30px;
+}
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+.grid {
+	width: 240px;
+	height: 480px;
+	background: rgb(250, 238, 224);
+	display: flex;
+	flex-wrap: wrap;
+}
+.grid div {
+	height: 24px;
+	width: 24px;
+	/* background: #f00; */
+}
+.grid div:not(.taken) {
+	border: 1px dotted rgb(140, 241, 223);
+	box-sizing: border-box;
+}
+.tetromino {
+	border: 2px dashed #fff;
+	box-sizing: border-box;
+}
+.mini-grid {
+	width: 80px;
+	height: 80px;
+	display: flex;
+	flex-wrap: wrap;
+	background: rgb(250, 238, 224);
+	margin-left: 50px;
+}
+.mini-grid div {
+	height: 20px;
+	width: 20px;
+	border: 1px dotted rgb(140, 241, 223);
+	box-sizing: border-box;
+}
+
+/* for effect */
+
+.animated {
+	opacity: 0;
+	visibility: hidden;
+	transition: 1500ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.animated.inview {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0);
+}
+
+.fadeInUp {
+	transform: translateY(100px);
+}
+
+.fadeInDown {
+	transform: translateY(-100px);
+}
+
+.fadeInLeft {
+	transform: translateX(50px);
+}
+
+.fadeInRight {
+	transform: translateX(-50px);
+}
+
+.turnIn {
+	transform: scaleX(-1);
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+}
+
+.zoomIn {
+	transform: scale(1.3);
+}
